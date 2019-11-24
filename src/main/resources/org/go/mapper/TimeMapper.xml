@@ -5,6 +5,6 @@
 
 <mapper namespace="org.go.mapper.TimeMapper">
 <select id="getTime2" resultType="string">
-select now()
+select sysdate from dual
 </select>
 </mapper>
