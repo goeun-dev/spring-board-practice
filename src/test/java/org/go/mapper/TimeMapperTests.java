@@ -1,4 +1,4 @@
-package org.go.persistence;
+package org.go.mapper;
 
 import org.go.mapper.TimeMapper;
 import org.junit.Test;
