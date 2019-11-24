@@ -17,9 +17,9 @@
 
     <!-- Page-Level Demo Scripts - Tables - Use for reference -->
     <script>
+	$(document).ready(function(){
 
-
-    $(".sidebar-nav"){
+    $(".sidebar-nav")
 	    .attr("class","sidebar-nav navbar-collapse collapse")
 	    .attr("aria-expanded",'false')
 	    .attr("style","height:1px");
