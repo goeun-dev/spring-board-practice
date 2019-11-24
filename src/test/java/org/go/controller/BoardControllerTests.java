@@ -1,6 +1,7 @@
 package org.go.controller;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -44,5 +45,56 @@ public class BoardControllerTests {
 				.getModelAndView()
 				.getModelMap()
 			);
+	}
+
+	@Test
+	public void testRegister() throws Exception {
+
+		String resultPage = mockMvc.perform(
+			post("/board/register")
+			.param("title", "테스트 새글 제목")
+			.param("content", "테스트 새글 내용")
+			.param("writer", "user00")
+		).andReturn().getModelAndView().getViewName();
+
+		log.info(resultPage);
+
+	}
+
+	@Test
+	public void tetGet() throws Exception {
+
+		log.info(mockMvc.perform(
+				get("/board/get")
+				.param("bno", "7")
+			).andReturn().getModelAndView().getModelMap()
+		);
+	}
+
+	@Test
+	public void testModify() throws Exception {
+
+		String resultPage =
+			mockMvc.perform(
+				post("/board/modify")
+				.param("bno", "1")
+				.param("title", "수정된 테스트 새글 제목")
+				.param("content", "수정된 테스트 새글 내용")
+				.param("writer", "user00")
+			).andReturn().getModelAndView().getViewName();
+
+		log.info(resultPage);
+
+	}
+
+	@Test
+	public void testRemove() throws Exception {
+
+		String resultPage = mockMvc.perform(
+			post("/board/remove")
+			.param("bno", "9")
+		).andReturn().getModelAndView().getViewName();
+
+		log.info(resultPage);
 	}
 }
