@@ -31,4 +31,6 @@
 	<mybatis-spring:scan base-package="org.go.mapper"/>
 
 	<context:component-scan base-package="org.go.controller"></context:component-scan>
+
+	<context:component-scan base-package="org.go.service"></context:component-scan>
 </beans>
