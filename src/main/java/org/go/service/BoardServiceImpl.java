@@ -19,6 +19,8 @@ public class BoardServiceImpl implements BoardService {
 	@Setter(onMethod_ = @Autowired)
 	private BoardMapper mapper;
 
+	// 등록, 수정, 삭제, 조회, 리스트 구현
+
 	@Override
 	public void register(BoardVO board) {
 

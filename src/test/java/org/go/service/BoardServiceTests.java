@@ -27,6 +27,7 @@ public class BoardServiceTests {
 		assertNotNull(service);
 	}
 
+	// 등록, 수정, 삭제, 조회, 리스트
 	@Test
 	public void testRegister() {
 
