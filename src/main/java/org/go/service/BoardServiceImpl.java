@@ -19,46 +19,34 @@ public class BoardServiceImpl implements BoardService {
 	@Setter(onMethod_ = @Autowired)
 	private BoardMapper mapper;
 
-	// 등록, 수정, 삭제, 조회, 리스트 구현
-
 	@Override
 	public void register(BoardVO board) {
+		// TODO Auto-generated method stub
 
-		log.info("register......" + board);
-
-		mapper.insertSelectKey(board);
 	}
 
 	@Override
 	public BoardVO get(Long bno) {
-
-		log.info("get......" + bno);
-
-		return mapper.read(bno);
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override
 	public boolean modify(BoardVO board) {
-
-		log.info("modify......" + board);
-
-		return mapper.update(board) == 1;
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 	@Override
 	public boolean remove(Long bno) {
-
-		log.info("remove...." + bno);
-
-		return mapper.delete(bno) == 1;
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 	@Override
 	public List<BoardVO> getList() {
-
-		log.info("getList..........");
-
-		return mapper.getList();
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
